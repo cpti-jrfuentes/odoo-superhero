@@ -21,7 +21,7 @@
 
     <record model="ir.actions.act_window" id="superhero.action_popular_superhero_wizard">
       <field name="name">Popular Superheroes Wizard</field>
-      <field name="res_model">superhero.popular.superhero.wizard</field>
+      <field name="res_model">popular.superhero.wizard</field>
       <field name="view_mode">form</field>
       <field name="view_id" ref="superhero.superhero_popular_superhero_wizard_view"/>
       <field name="target">new</field>
