@@ -2,4 +2,4 @@ id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
 superhero.secret.identity,superhero.secret.identity,superhero.model_superhero_secret_identity,base.group_user,1,1,1,1
 superhero.super.power,superhero.super.power,superhero.model_superhero_super_power,base.group_user,1,1,1,0
 superhero.superhero,superhero.superhero,superhero.model_superhero_superhero,base.group_user,1,1,1,0
-popular.superhero.wizard,popular.superhero.wizard,model_popular_superhero_wizard,,1,1,1,0
+popular.superhero.wizard,popular.superhero.wizard,superhero.model_popular_superhero_wizard,,1,1,1,0
