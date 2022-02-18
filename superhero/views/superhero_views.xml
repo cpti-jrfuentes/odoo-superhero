@@ -1,0 +1,127 @@
+<?xml version="1.0"?>
+<odoo>
+     <data>
+        <!-- explicit list view definition -->
+        
+        <record id="superhero_secret_identity_view_list" model="ir.ui.view">
+            <field name="name">Secret Identity List</field>
+            <field name="model">superhero.secret.identity</field>
+            <field name="arch" type="xml">
+                <tree string="Secret Identity">
+                    <field name="first_name"/>
+                    <field name="last_name"/>
+                    <field name="date_of_birth"/>
+			    </tree>
+            </field>
+        </record>
+        <record id="superhero_secret_identity_view_form" model="ir.ui.view">
+            <field name="name">Secret Identity Form</field>
+            <field name="model">superhero.secret.identity</field>
+            <field name="arch" type="xml">
+                <form string="Secret Identity">
+                    <sheet>
+                        <group>
+                            <group>
+                                <field name="first_name"/>
+                            </group>
+                            <group>
+                                <field name="last_name"/>
+                            </group>
+                            <group>
+                                <field name="date_of_birth"/>
+                            </group>
+                        </group>
+                    </sheet>
+                </form>            
+            </field>
+        </record>
+
+        <record id="superhero_super_power_view_list" model="ir.ui.view">
+            <field name="name">Super Power List</field>
+            <field name="model">superhero.super.power</field>
+            <field name="arch" type="xml">
+                <tree string="Super Power">
+                    <field name="name"/>
+                    <field name="description"/>
+                    <field name="superhero_ids" widget="many2many_tags"/>
+			    </tree>
+            </field>
+        </record>
+        <record id="superhero_super_power_view_form" model="ir.ui.view">
+            <field name="name">Super Power Form</field>
+            <field name="model">superhero.super.power</field>
+            <field name="arch" type="xml">
+                <form string="Super Power">
+                    <sheet>
+                        <group>
+                            <group>
+                                <field name="name"/>
+                            </group>
+                            <group>
+                                <field name="description"/>
+                            </group>
+                            <group>
+                                <field name="superhero_ids" widget="many2many_tags"/>
+                            </group>
+                        </group>
+                    </sheet>
+                </form>            
+            </field>
+        </record>
+
+        <record id="superhero_superhero_view_list" model="ir.ui.view">
+            <field name="name">Superhero List</field>
+            <field name="model">superhero.superhero</field>
+            <field name="priority" eval="2"/>
+            <field name="arch" type="xml">
+                <tree string="Superhero">
+                    <field name="name"/>
+                    <field name="super_power_ids" widget="many2many_tags"/>
+                    <field name="secret_identity_id"/>
+                    <field name="country_id"/>
+                    <field name="fans"/>
+			    </tree>
+            </field>
+         </record>
+        <record id="superhero_superhero_view_list_s" model="ir.ui.view">
+            <field name="name">Superhero List Short</field>
+            <field name="model">superhero.superhero</field>
+            <field name="priority" eval="99"/>
+            <field name="arch" type="xml">
+                <tree string="Superhero (Short)">
+                    <field name="name"/>
+                    <field name="super_power_ids" widget="many2many_tags"/>
+                    <field name="secret_identity_id"/>
+			    </tree>
+            </field>
+         </record>
+        <record id="superhero_superhero_view_form" model="ir.ui.view">
+            <field name="name">Superhero Form</field>
+            <field name="model">superhero.superhero</field>
+            <field name="arch" type="xml">
+                <form string="Superhero">
+                    <sheet>
+                        <group>
+                            <group>
+                                <field name="name"/>
+                            </group>
+                            <group>
+                                <field name="super_power_ids" widget="many2many_tags"/>
+                            </group>
+                            <group>
+                                <field name="secret_identity_id"/>
+                            </group>
+                            <group>
+                                <field name="country_id"/>
+                            </group>
+                            <group>
+                                <field name="fans"/>
+                            </group>
+                        </group>
+                    </sheet>
+                </form>            
+            </field>
+        </record>
+
+	</data>
+</odoo>

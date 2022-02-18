@@ -1,0 +1,12 @@
+models/__pycache__/superhero_secret_identity.cpython-38.pyc
+models/__pycache__/__init__.cpython-38.pyc
+controllers/__pycache__/controllers.cpython-38.pyc
+controllers/__pycache__/__init__.cpython-38.pyc
+__pycache__/__init__.cpython-38.pyc
+models/__pycache__/superhero_super_power.cpython-38.pyc
+models/__pycache__/superhero_superhero.cpython-38.pyc
+models/__pycache__/res_config_settings.cpython-38.pyc
+models/__pycache__/pos_config.cpython-38.pyc
+wizard/__pycache__/__init__.cpython-38.pyc
+wizard/__pycache__/popular_superhero_report.cpython-38.pyc
+wizard/__pycache__/popular_superhero_wizard.cpython-38.pyc

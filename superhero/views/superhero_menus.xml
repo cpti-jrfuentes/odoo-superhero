@@ -1,0 +1,78 @@
+<odoo>
+  <data>
+    <!-- actions opening views on models -->
+
+    <record model="ir.actions.act_window" id="superhero.secret_identity_window">
+      <field name="name">Secret Identity</field>
+      <field name="res_model">superhero.secret.identity</field>
+      <field name="view_mode">tree,form</field>
+    </record>
+    <record model="ir.actions.act_window" id="superhero.super_power_window">
+      <field name="name">Super Power</field>
+      <field name="res_model">superhero.super.power</field>
+      <!-- field name="view_mode">tree,form</field -->
+      <field name="view_mode">form,tree</field>
+    </record>
+    <record model="ir.actions.act_window" id="superhero.superhero_window">
+      <field name="name">Superhero</field>
+      <field name="res_model">superhero.superhero</field>
+      <field name="view_mode">tree,form</field>
+    </record>
+
+    <record model="ir.actions.act_window" id="superhero.action_popular_superhero_wizard">
+      <field name="name">Popular Superheroes Wizard</field>
+      <field name="res_model">superhero.popular.superhero.wizard</field>
+      <field name="view_mode">form</field>
+      <field name="view_id" ref="superhero_popular_superhero_wizard_view"/>
+      <field name="target">new</field>
+    </record>
+
+    <!-- server action to the one above -->
+    <!--
+    <record model="ir.actions.server" id="superhero.secret_identity_server">
+      <field name="name">Secret Identity</field>
+      <field name="model_id" ref="model_superhero_secret_identity"/>
+      <field name="state">code</field>
+      <field name="code">
+        action = {
+          "type": "ir.actions.act_window",
+          "view_mode": "tree,form",
+          "res_model": model._name,
+        }
+      </field>
+    </record>
+    -->
+
+    <!-- Top menu item -->
+    <menuitem name="Superhero" id="superhero.menu_root"/>
+
+    <!-- menu categories -->
+    <menuitem name="Configuration" id="superhero.menu_config" 
+              parent="superhero.menu_root"/>
+    <menuitem name="Reporting" id="superhero.menu_report" 
+              parent="superhero.menu_root"/>
+
+    <!-- actions -->
+    <menuitem name="Superhero" id="superhero.menu_superhero" 
+              parent="superhero.menu_config"
+              action="superhero.superhero_window"
+              sequence="1"/>
+    <menuitem name="Super Power" id="superhero.menu_super_power" 
+              parent="superhero.menu_config"
+              action="superhero.super_power_window"
+              sequence="2"/>
+    <menuitem name="Secret Identity" id="superhero.menu_secret_identity" 
+              parent="superhero.menu_config"
+              action="superhero.secret_identity_window"
+              sequence="3"/>
+
+    <menuitem name="Most Popular Superheroes Report" id="superhero.menu_popular_superhero_report" 
+              parent="superhero.menu_report"
+              action="superhero.action_popular_superhero_wizard"/>
+
+
+    <menuitem name="Most Common Super Powers Report" id="superhero.menu_common_super_power_report" 
+              parent="superhero.menu_report"
+              action="superhero.secret_identity_window"/>
+  </data>
+</odoo>

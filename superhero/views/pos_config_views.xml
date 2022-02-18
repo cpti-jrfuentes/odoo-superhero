@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="res_config_settings_view_form" model="ir.ui.view">
+        <field name="name">pos.config.view.form.inherit.superhero</field>
+        <field name="model">pos.config</field>
+        <field name="priority" eval="95"/>
+        <field name="inherit_id" ref="point_of_sale.pos_config_view_form" />
+        <field name="arch" type="xml">
+            <xpath expr="//sheet" position="inside">
+                <div class="app_settings_block" data-string="Superhero" string="Superhero" data-key="superhero" groups="point_of_sale.group_pos_manager">
+                <!--div class="app_settings_block" data-string="Point of sale" string="Point of Sale" data-key="point_of_sale" groups="point_of_sale.group_pos_manager" -->
+                    <h2>Superhero</h2>
+                    <div class="row mt16 o_settings_container" name="superhero_setting_container">
+                        <div class="col-12 col-lg-6 o_setting_box"
+                            id="superhero_setting"
+                            title="This superhero will be printed on every Receipt.">
+                            <div class="o_setting_right_pane">
+                                <div>
+                                    <label string="Superhero" for="superhero_id"/>
+                                    <div class="text-muted">
+                                        This superhero will be printed on every Receipt
+                                    </div>
+                                    <div class="content-group mt16">
+                                        <field name="superhero_id" />
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </xpath>
+        </field>
+    </record>
+
+</odoo>

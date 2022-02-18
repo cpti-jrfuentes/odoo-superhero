@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<odoo>
+     <data>
+        <record id="superhero_popular_superhero_wizard_view" model="ir.ui.view">
+            <field name="name">Popular Superhero Wizard</field>
+            <field name="model">popular.superhero.wizard</field>
+            <field name="arch" type="xml">
+                <form string="Popular Superhero">
+                    <group>
+                        <field name="fans"/>
+                    </group>
+                    <footer>
+                         <button name="action_print_report" type="object" string="Print" class="btn-primary"/> 
+                         <button string="Cancel" class="btn-secondary" special="cancel"/> 
+                    </footer>
+                </form>            
+            </field>
+        </record>
+
+	</data>
+</odoo>
