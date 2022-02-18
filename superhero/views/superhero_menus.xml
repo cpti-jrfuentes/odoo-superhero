@@ -23,7 +23,7 @@
       <field name="name">Popular Superheroes Wizard</field>
       <field name="res_model">superhero.popular.superhero.wizard</field>
       <field name="view_mode">form</field>
-      <field name="view_id" ref="superhero_popular_superhero_wizard_view"/>
+      <field name="view_id" ref="superhero.superhero_popular_superhero_wizard_view"/>
       <field name="target">new</field>
     </record>
 
