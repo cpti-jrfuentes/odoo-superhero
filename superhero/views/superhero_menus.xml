@@ -23,7 +23,8 @@
       <field name="name">Popular Superheroes Wizard</field>
       <field name="res_model">popular.superhero.wizard</field>
       <field name="view_mode">form</field>
-      <field name="view_id" ref="superhero.superhero_popular_superhero_wizard_view"/>
+      <!-- This causes an error in odoo.sh. Removed line. View is the only view anyway -->
+      <!-- <field name="view_id" ref="superhero.superhero_popular_superhero_wizard_view"/> -->
       <field name="target">new</field>
     </record>
 
